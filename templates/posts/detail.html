@@ -1,0 +1,36 @@
+{% extends "posts/base.html" %}
+
+{% block cover %}<div class="ban container-fluid">
+<!-- adsense ads -->
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-sm-8" style="margin-left:30px;">
+
+    <div class="thumbnail" style="padding-left:35px;">
+    {% if instance.image %}
+      <img src='{{ instance.image.url }}' class="img-responsive" alt='post{{ i.id }}'>
+      {% endif %}
+      <div class="caption">
+        <h2 style="font-size:45px;"><img src="/static/img/{{ instance.tips_type }}.jpg" style="width:37px;height:37px;">&nbsp;&nbsp;<b>{{instance.title}}</b>    &nbsp;&nbsp;&nbsp;&nbsp;<small style="font-size:17px;">{{ instance.timestamp|timesince }}</small></h2>
+
+        <br><br>
+
+        <div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
+        <!-- Place this tag where you want the share button to render. -->
+          <div class="g-plus" data-action="share"></div>
+
+        <p>{{instance.content|linebreaks}}</p>
+        <h6>Author - {{ instance.author }}</h6>
+          <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

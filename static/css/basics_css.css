@@ -1,0 +1,35 @@
+.left_part{
+	float:left;
+	width:75%;
+	height:auto;
+	padding:10px;
+}
+
+.right_part{
+	float:right;
+	width:22%;
+	margin-right:5px;
+	height:600px;
+	padding:0px;
+}
+
+.banner{
+	height:320px;
+	text-align: left;
+	width: 100%;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 6px;
+	margin-top: 4px;
+	
+}
+
+.ban{
+	height:auto;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 6px;
+	margin-top: 4px;
+
+}
+

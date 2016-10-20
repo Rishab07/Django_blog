@@ -1,0 +1,26 @@
+.left_part{
+	float:left;
+	width:67%;
+	height:auto;
+	padding:10px;
+}
+
+
+.right_part{
+	float:right;
+	width:26%;
+	margin-right:5px;
+	height:600px;
+	padding:0px;
+}
+
+.banner{
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 6px;
+	margin-top: 4px;
+}
+
+.banner img{
+	height:100px;
+}

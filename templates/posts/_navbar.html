@@ -1,0 +1,46 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <spa n class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'posts:home' %}" style="margin-left:10px;">Thought of The Day</a>
+    </div>
+
+
+
+<form class="navbar-form navbar-right" mthod="GET" action="" style="margin-right:20px;">
+        <div class="form-group">
+          <input type="text" placeholder="Search here" class="form-control" name = "q" value="{{ request.GET.q }}" style="width:350px;height:37px;" />
+        </div>
+        <button style="height:37px;" type="submit" class="btn btn-primary">Search</button>
+      </form>
+
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling--> 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+      <ul class="nav navbar-nav navbar-right" style="color:white;">
+        <li><a href="{% url 'posts:home' %}">Recents</a></li>
+
+
+
+<!--
+
+        <form mthod="GET" action="">
+<input type="text" placeholder="Search here" name = "q" value="{{ request.GET.q }}" />
+<input type="submit" value="Search" />
+</form>
+-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

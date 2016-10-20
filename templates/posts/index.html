@@ -1,0 +1,47 @@
+{% extends "posts/base.html" %}
+
+
+
+{% block content %}
+<div class="col-sm-8 col-sm-offset-2">
+{% for i in name %}
+<div class="row">
+  <div class="col-sm-8">
+    <div class="thumbnail">
+      {% if i.image %}
+      <img src='{{ i.image.url }}' class="img-responsive" alt='post{{ i.id }}'>
+
+      {% endif %}
+
+      <div class="caption">
+        <h2 style="font-size:45px;color:rgba(0,0,255,0.8);"><img src="/static/img/{{ i.tips_type }}.jpg" style="width:37px;height:37px;">&nbsp;&nbsp;<b>{{ i.title }}</b>    &nbsp;&nbsp;&nbsp;&nbsp;<small style="font-size:17px;">{{ i.timestamp|timesince }}</small></h2>
+
+        <br/>
+        <p>{{i.content|linebreaks|truncatechars:226}}</p>
+        <a href="{% url 'posts:detail' id=i.id %}" <button class="btn btn-primary">View</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<div class="pagination">
+<span class="step-links">
+{% if name.has_previous %}
+<a href="?page={{ name.previous_page_number }}">previous</a>
+{% endif %}
+<span class="current">
+Page {{ name.number }} of {{ name.paginator.num_pages }}.
+</span>
+{% if name.has_next %}
+<a href="?page={{ name.next_page_number }}">next</a>
+{% endif %}
+</span>
+</div>
+
+</div>
+{% endblock %}
+
+
+
+
